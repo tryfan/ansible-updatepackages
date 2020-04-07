@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: true
+  tasks:
+    - name: populate service facts
+      service_facts:
+
+    - debug:
+        var: ansible_facts.services
